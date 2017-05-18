@@ -1,0 +1,6 @@
+<ul class="tasks">
+	<li ng-repeat="item in tasks" ng-if="item.status">
+		<input type="checkbox" ng-model="item.status" ng-checked="item.status">
+		<span>{{ item.name }} | {{ item.status }}</span>
+	</li>
+</ul>

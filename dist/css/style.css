@@ -1,0 +1,177 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora';
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+  color: #C9FDD7; }
+
+p {
+  line-height: 1.635; }
+
+ul {
+  list-style: none; }
+
+li {
+  display: block; }
+
+body {
+  font-family: 'Roboto';
+  font-size: 18px;
+  background: url(../../img/pink_dust.png) repeat; }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px; }
+
+.mainTitle {
+  font-size: 3em; }
+
+input[type=checkbox] {
+  visibility: hidden; }
+
+.formInput {
+  margin-bottom: 30px; }
+  .formInput h2 {
+    font-size: 1.250em; }
+  .formInput input,
+  .formInput button {
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.250em;
+    padding: 10px; }
+  .formInput input {
+    font-family: 'Roboto';
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-right: 15px;
+    border-bottom: 1px solid #565656;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid transparent; }
+    .formInput input:focus, .formInput input:active {
+      border-bottom: 2px solid #C9FDD7;
+      outline: none; }
+  .formInput button {
+    width: 20%;
+    margin: 0 auto;
+    background: #FFFE9F;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    color: #505050;
+    font-family: 'Roboto';
+    font-weight: 400; }
+    .formInput button:hover {
+      cursor: pointer; }
+
+@media screen and (min-width: 480px) {
+  .formInput input {
+    display: inline-block;
+    width: 80%; }
+  .formInput button {
+    display: inline-block;
+    width: 15%; } }
+
+.tasks li {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.635;
+  padding-bottom: 15px;
+  font-size: 1.250em;
+  color: white; }
+
+.taskCheckbox {
+  display: inline-block;
+  width: 25px;
+  padding: 0 10px;
+  line-height: 1.635;
+  position: relative; }
+  .taskCheckbox label {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd; }
+    .taskCheckbox label:hover::after {
+      opacity: 0; }
+    .taskCheckbox label::after {
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 5px;
+      background: transparent;
+      top: 10px;
+      left: 9px;
+      border: 3px solid #333;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg); }
+  .taskCheckbox input[type=checkbox]:checked ~ span {
+    color: #d0ff9f;
+    background: #d0ff9f; }
+  .taskCheckbox input[type=checkbox]:checked + label:after {
+    opacity: 1; }
+
+.greenTxt {
+  color: #d0ff9f;
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: all 0.3s ease-in-out; }

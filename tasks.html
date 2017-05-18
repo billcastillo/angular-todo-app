@@ -1,0 +1,9 @@
+<ul class="tasks">
+	<li class="tasksModule" ng-repeat="item in tasks">
+		<div class="taskCheckbox">
+			<input id="showDoneTasks-{{$id}}" type="checkbox" ng-model="item.status" ng-checked="item.status">
+			<label for="showDoneTasks-{{$id}}"></label>
+		</div>
+		<span ng-class="{greenTxt: item.status}">{{ item.name }}</span>
+	</li>
+</ul>
