@@ -23,15 +23,31 @@ app1.controller('ctrl1', ['$scope', function($scope) {
 
 	$scope.addTasks = function(typeTask) {
 		if(!(typeTask === undefined || typeTask === "")) {
-		    $scope.tasks.push({  
+		    $scope.tasks.unshift({  
 		      name: $scope.typeTask,
 		      status: false
 		    });
+
+		    // $('.tasks').prepend($scope.typeTask);
+		    // items.unshift(typeTask);
+
+		    $scope.typeTask = "";
 		}
 	};
 
 	$scope.getTasks = function(){
 		return $scope.showTasks ? "doneTasks.html" : "undoneTasks.html";
 	}
+	/*
+	$scope.getID = function(){
+		// var elemID = '#del-' + $(this).find("input").attr("id");
+		var elemID = $(".tasksModule").attr("id");
+		console.log(elemID);
+		$(elemID).hide();
+		var elemID = "";
+		// console.log("2" + elemID);
+	}
+	*/
 
 }]);
+
