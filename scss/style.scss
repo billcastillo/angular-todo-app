@@ -147,13 +147,63 @@ input[type=checkbox] {
 }
 
 .tasks {
-  li {
-    display: inline-block;
-    width: 100%;
+  .tasksModule {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 100%;
     line-height: 1.635;
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
     font-size: 1.250em;
     color: lighten(#99F0CA, 50%);
+
+    .close {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px 0;
+      .close-btn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &:hover {
+          cursor: pointer;
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          opacity: 0;
+          content: '';
+          width: 100%;
+          height: 2px;
+          top: 50%;
+          // border-radius: 50%;
+          background: #fff;
+          transition: all 0.25s ease-in-out;
+        }
+        &::before {
+          transform: rotate(-45deg);
+        }
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:hover {
+      .close {
+        .close-btn {
+          &::before,
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -208,3 +258,4 @@ input[type=checkbox] {
   text-decoration: line-through;
   transition: all 0.3s ease-in-out;
 }
+
