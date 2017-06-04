@@ -154,7 +154,7 @@ input[type=checkbox] {
     align-items: center;
     // width: 100%;
     line-height: 1.635;
-    // padding-bottom: 15px;
+    padding-bottom: 15px;
     font-size: 1.250em;
     color: lighten(#99F0CA, 50%);
 
@@ -195,6 +195,7 @@ input[type=checkbox] {
     }
 
     &:hover {
+      cursor: pointer;
       .close {
         .close-btn {
           &::before,

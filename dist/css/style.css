@@ -133,6 +133,7 @@ input[type=checkbox] {
   justify-content: space-between;
   align-items: center;
   line-height: 1.635;
+  padding-bottom: 15px;
   font-size: 1.250em;
   color: white; }
   .tasks .tasksModule .close {
@@ -162,8 +163,10 @@ input[type=checkbox] {
         transform: rotate(-45deg); }
       .tasks .tasksModule .close .close-btn::after {
         transform: rotate(45deg); }
-  .tasks .tasksModule:hover .close .close-btn::before, .tasks .tasksModule:hover .close .close-btn::after {
-    opacity: 1; }
+  .tasks .tasksModule:hover {
+    cursor: pointer; }
+    .tasks .tasksModule:hover .close .close-btn::before, .tasks .tasksModule:hover .close .close-btn::after {
+      opacity: 1; }
 
 .taskCheckbox {
   display: inline-block;

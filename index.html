@@ -48,16 +48,14 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>
 	<script src="js/script.js"></script>
 	<script>
 		$(document).ready(function() {
-			$( ".taskCheckbox input[type=checkbox]" ).on( "click", function(){
-
-			});
-			var name = $('.taskCheckbox input[type=checkbox]').is(':checked');
-			console.log(name);
-
-			$('.ng-not-empty').parent().find('span').css('color', '#d0ff9f');
+			$('.tasks').sortable();
 		});
 	</script>
 
